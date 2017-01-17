@@ -7,8 +7,14 @@ import React, { Component } from 'react';
 // When to use the class based component vs function based component. 
 class SearchBar extends Component {
     render() {
-        return <input />; 
+        // return <input onChange={this.onInputChange} />;
+        // return <input onChange={(event) => console.log(event.target.value)} />;
+        return <input onChange={event => console.log(event.target.value)} />;  
     }
+
+    // onInputChange(event) {
+    //     console.log(event.target.value); 
+    // }
 }; 
 
 export default SearchBar; 
